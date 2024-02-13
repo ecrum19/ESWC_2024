@@ -165,8 +165,7 @@ The proposed scientific approach will contribute novel data and conclusions to n
 Describe the research methodology you will apply in your research, including the different steps from the formulation of your research questions to answering them. Also describe the approach you are taking (or you intend to take for Early Stage Ph.D. submissions) to instantiate the research methodology, hence contributing to solve the problem described in Section 3 and confirm or reject your hypothesis. Discuss how this approach is innovative and novel, and how it is (might be) implemented.
 \end{comment}
 
-My project will be split into five different component work packages and a final sixth work package where the components will be deployed as a cohesive framework. 
-The work packages will be undertaken relatively linearly and specific milestones for each is outlined in the "Evaluation Plan" Section.
+My project will be split into four different component work packages and a final fifth work package where the components will be deployed as a cohesive framework within a web application. 
 
 \begin{figure}
 \includegraphics[width=\textwidth]{fig1.eps}
@@ -189,12 +188,10 @@ I will test the viability of Solid data pods as storage infrastructure for patie
 
 A test dataset will be constructed using publicly available Illumina platinum genome files \cite{noauthor_platinum_nodate}. 
 These files will be used as representative "patient" PGS data for the project. 
-In later stages of the project, additional publicly available and/or AI generated PGS data may be utilized to test the performance of the framework when scaled to hundreds or thousands of pods. 
 
 I will also create server-hosted Solid pods that are representative of individual patient Solid pods using the Community Solid Server (CSS) specifications \cite{css}. 
 Each pod will be a storage container for a single individual\textquotesingle s PGS data. 
 We will create a representative patient\textquotesingle s pod by upload a single PGS file, a VCF file, into that pod to test basic functionality of a Solid pod for hosting patient data. 
-Once this is demonstrated for a single pod, the process will be used for scaling to many pods.
 For the purpose of uploading and viewing PGS data to patient pods, a simple online web-application will be built.
 The use of the CSS for Solid pod hosting for research purposes is state-of-the-art, but there have been no published experiments documenting the use of Solid pods for storing PGS data. 
 For Solid pod data uploading and viewing, applications like Penny \cite{penny} exist, but we will develop our own application for seamless integration of data privacy modification and querying functionalities later in the project. 
@@ -202,17 +199,14 @@ For Solid pod data uploading and viewing, applications like Penny \cite{penny} e
 
 \subsection{Work Package 2:  Storing PGS data in RDF and as Linked Data}
 
-I will test if PGS data can be converted from VCF to serialized RDF in ttl files. 
-I hypothesize that this conversion is possible, and the resulting RDF representation of PGS data can then allow for linking of other medically relevant data within the patient\textquotesingle s pod and outside of it.
+I hypothesize that the conversion from VCF to RDF is possible, and the resulting RDF representation can then allow for linking of other medically relevant data within the patient\textquotesingle s pod and outside of it.
 
-I intend on making a patient\textquotesingle s PGS data discoverable in the state-of-the-art VCF format to enable connection to existing clinical workflows. 
+I will make the conversion process reversible to enable connection to existing clinical workflows that request VCF format. 
 As of yet, there have been few documented investigations into representing PGS data, particularly VCF files, in RDF. 
 
-To convert of PGS data frpm VCF to RDF, we will investigate a format translation process using the SPHN RDF ontology \cite{van_der_horst_bridging_2023}. 
-During this translation process, we will experiment with different approaches for maintaining a map between the VCF and RDF to reverse the process efficiently. 
-This experimentation will likely include storing a bidirectional mapping index, but on-the-fly conversion of VCF to RDF during query execution will be investigated as well. 
+To convert PGS data from VCF to RDF, we will investigate a format translation process using the SPHN RDF ontology \cite{van_der_horst_bridging_2023}. 
+During this translation process, we will experiment with different approaches, such as a bidirectional mapping index, for maintaining a map between the VCF and RDF to reverse the process efficiently.
 Additional optimization may also look into different fragmentation strategies for serializing PGS data in separate files or other organizations that could help improve performance of RDF conversion and querying.
-I will compare the performance of the proposed mapping strategies in terms of ingestion speed, storage size, and query performance. 
 Because representation of VCF files in RDF has not been heavily studied, these will be the first experiments of their kind.
 
 I then intend to demonstrate the linking of part of a patient\textquotesingle s genome to
@@ -304,15 +298,19 @@ A registered reseracher will have limited access to stored data, when patients o
 These different actions for different roles within the framework will be tested and integrated into the web applciation for viewing and adding data to patient data pods. 
 
 \textbf{WP4}
-Additionally, the other milestone of this work package that will signal its success is the establishment of the Solid pods as endpoints connected to the Beacon API in some manner. 
-
 I think I need to talk through this one the most... 
 
-(1) Establish that PGS data within a Solid pod can be queried using SPARQL via a query engine
-(2) Benchmark how computational source impacts PGS data query performance
-(3) Benchmark queries over single and multiple pod PGS data using existing LTQP algorithms
-(4) Develop novel algorithmic approach using pre-computed indexes and compare to LTQP algorithms
-(5) Integrate query functionality into a user interface (with example queries for non-experts)
+Set up and test the operability of a Comunica server on the VITO HPC.
+Test the functionality of a simple query over a single patient pod and over multiple patient pods.
+Benchmark how computational source impacts PGS data query performance by tracking time and cpu time used...
+
+Assess the performance of existing algorithms vs ones that utilize an index ...
+
+(5) Integrate query functionality into the framework web application (with example queries for non-experts)
+
+\textbf{WP5}
+
+Additionally, the other milestone of this work package that will signal its success is the establishment of the Solid pods as endpoints connected to the Beacon API in some manner. 
 
 
 \section{Results}
