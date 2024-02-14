@@ -22,7 +22,7 @@
 	Medical care is in the process of becoming increasingly personalized through the use of patient genetic information. 
 	At present, digital data useful for clinical care is commonly diffuse, organized arbitrarily, and stored in data silos. 
   Unstructured organization, high cost data storage and generation, and tight privacy restrictions pose serious challenges to scaling personalized clinical strategies.
-  \phrasing{Here I propose an early stage Ph.D.} that aims to improve the connectedness and shareability of genomic data storage(s), while preserving data privacy, through the integration of various domains of semantic web research into a novel, wholistic framework designed for use in clinical practice. 
+  I propose an early stage Ph.D. that aims to improve the connectedness and shareability of genomic data storage(s), while preserving data privacy, through the integration of various domains of semantic web research into a novel, wholistic framework designed for use in clinical practice. 
 	To create this framework, I propose the integration of (a) storage of patient data using Solid pods, (b) represention of personal genome sequence data in Resource Description Format as Linked Data, (c) attachment of policies to stored data, and (d) querying of data through link traversal process queries into a single, unified workflow with an accompanying web application.
 
 	Preliminarily, I have succeeded in storing genomic data in representative patient data pods using Solid specifications. 
@@ -46,7 +46,7 @@ Despite great promise presented by various use cases, barriers to adoption remai
 One major challenge is presented by the digital representation, storage, and access to the PGS data that underlies clinical usage.
 With the PENGQUIN project, I aim to address the challenges presented by PGS data usage in clinical practice by leveraging  decentralized storage, data representation, and querying technologies.  
 
-\subsubsection{PGS data storage and sharing} 
+\textbf{PGS data storage and sharing} 
 PGS data are expensive to both generate and store. 
 The average human genome is slightly over 3 billion base pairs in length (3 Gbp). 
 During a whole genome sequencing workflow, various sequence formats that offer different sets of information are produced (see \textit{Bagger et al.} for a comprehensive review \cite{bagger_whole_2024}).
@@ -62,31 +62,19 @@ Another increase in efficiency could be achieved by greater connectivity of a si
 Increasing patient data connectedness and accessibility for authorized users is not a trivial problem while also maintaining privacy.
 It is at this crossroads that the current state-of-the-art in clinical data storage technology is largely incapable of achieving both goals.
 
-\subsubsection{A Solid Solution} 
-A citizen-centric system of clinical PGS data storage is one possible solution to the current dead-end described above. 
+\textbf{A Solid Solution} 
+A possible solution to the challenges faced is through reorganization of how data is stored and discovered. 
 The citizen-centric model places the patient at the center, and is not an entirely novel concept \cite{brands_patient-centered_2022}.
-Building a citizen-centric model for scalability is the challenge we are currently faced with.
-One decentralized data storage approach, the Solid protocol \cite{capadisli_solid_nodate}, offers capabilities to granularize data privacy, allow authorized data access over the web, represent stored data as Linked Data, among others.
-Because of these unique capabilities, Solid shows promise in the realization of a citizen-centric storage framework, thereby, removing some of the antagonism between cost reduction and privacy.
+Within the current system, a citizen-centric model is difficult to implement due to technological challenges presented by centralized databases.
+The Solid protocol \cite{capadisli_solid_nodate}, a decentralized data storage approach, is composed of specifications more conducive to construction of a citizen-centrical data storage strategy for clinical data.
+Specifically, Solid offers the ability to granularize data privacy, allow authorized data access over the web, and represent stored data as Linked Data, all features that can work to remove some of the antagonism between cost reduction and privacy preservation.
 
-\rv{The title of the paragraph mismatches with its contents; if the title is correct, what is the benefit of semantics?}
-\rt{One possible answer: universal identifiers make it easier to link and integrate data from across multiple decentralized data sources across the web}
-
-\textbf{Resource Description Format and Linked Data.}
-To fully harness the advantages offered by Solid, experimentation with semantic data representation and data linkages hold great promise to both reduce costs and improve medical efficacy.
-Resource Description Framework (RDF) is a way of semantically representing data that also allows for data linking across documents and datastores
-Some large public biological databases, such as UniProt \cite{theuniprotconsortium_uniprot_2017}, have been fully converted to RDF and initiatives exist for further expansion of biological data storage as RDF \cite{sib_swiss_institute_of_bioinformatics_rdf_group_members_sib_2024}.
-RDF holds promise within healthcare for connecting clinically-relevant data and has been proposed for use in Electronic Patient Records in the past \cite{lindemann_resource_2008}.
-More modernly, initiatives for improving the interoperability of health data through integrating semantic layers of information into data stores, primarily through the representation of data as RDF, have been undertaken in Europe \cite{van_der_horst_bridging_2023}.
-With more and more data being represented in RDF, the advantages of such a data formatting strategy are now becoming increasingly possible.
-
-\rv{Well yes, but for our target audience, make this more tangible. They know RDF already; the biological data argument is good, but the rest of the paragraph needs to be more tangible. It's currently more at the level for that medical professionals need to know.}
 
 \textbf{Project Motivation.}
 Despite there being no real solutions to the current antagonism between privacy and cost reduction for PGS data usage in healthcare, there is also a conspicuous gap in the current scientific discourse around the development and implementation of a proposed solution. 
-This gap underscores the necessity of my research project.
-My aim is to develop a framework for storing, sharing, linking, and querying PGS data in Patient Genome Pods using the Solid protocol \cite{capadisli_solid_nodate}.
-My project described here will aim to establish a proof-of-concept demonstration of how a decentralized storage framework for PGS data could achieve both cost reduction goals along with privacy protections.
+This gap underscores the necessity of my Ph.D.
+I aim to improve the connectedness and shareability of genomic data storage(s), while preserving data privacy, through the integration of various domains of semantic web research into a novel, wholistic framework designed for use in clinical practice. 
+My Ph.D. will also aim to demonstrate the limitations of current state-of-the-art semantic web technologies in this novel application domain with the intention of driving innovation and discovering future research pursuits.
 
 
 \section{State of the Art}
