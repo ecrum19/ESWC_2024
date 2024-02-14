@@ -40,49 +40,63 @@ Give a general introduction to the domain/area/topic and indication of its impor
 \end{comment}
 
 As our understanding of genomics deepens, the role of Personal Genome Sequencing (PGS) in healthcare is expanding. 
-At the time of writing, there are multiple domains of clinical practice where patient PGS data is now used to inform medical decision making \cite{souche_recommendations_2022}\cite{gil_analysis_2015}. 
+At the time of writing, there are multiple domains of clinical practice where patient PGS data is now used to inform medical decision making \cite{souche_recommendations_2022,gil_analysis_2015}. 
 Despite recent advances, PGS data usage has yet to be scaled to more generalized clinical practice \cite{alzubi_personal_2014}. 
-While there are many documented challenges to wider clinical implementation of PGS data \cite{stefanicka-wojtas_barriers_2023}, one major challenge is presented by the digital representation, storage, and access to the PGS data that underlies established medical workflows.
+While there are many documented challenges to wider clinical implementation of PGS data~\cite{stefanicka-wojtas_barriers_2023}, one major challenge is presented by the digital representation, storage, and access to the PGS data that underlies established medical workflows.
 With the PENGQUIN project, I aim to address the challenges presented by PGS data usage in clinical practice by leveraging  decentralized storage, data representation, and querying technologies.  
 
-\subsubsection{Medical Motivations for PGS data in Cinical Practice}
+\rv{Remember that you're not writing for medical experts here. Could you incorporate an example above of how decision making is informed?}
+
+\subsubsection{Medical Motivations for PGS data in Clinical Practice}
 At present, there are major medical fields that preliminarily show readiness for greater use of PGS data, these being drug development and prescription, cancer diagnosis and treatment, and rare genetic disease identification and treatment.
-Genomic variation is thought to account for up to 95\% of outcome variations in drug prescription and treatment efficacy \cite{belle_genetic_2008}, while also becoming informative for new drug development recently \cite{ko_new_2022}. 
+Genomic variation is thought to account for up to 95\% of outcome variations in drug prescription and treatment efficacy~\cite{belle_genetic_2008}, while also becoming informative for new drug development recently \cite{ko_new_2022}. 
 In clinical practice, studies have documented genotype correlation with unintended drug responses for commonly prescribed drugs such as warfarin \cite{linder_genetic_2001} and many others \cite{research_table_2024}. 
 PGS usage, by helping predict, better understand, and inform optimal drug treatment plans, shows great potential for improving on the one-size-fits-all, trial and error approach to drug prescription popularly practiced today \cite{hens_return_2011}. 
-Similarily, for cancer patients, the use of PGS data has been shown to augment existing strategies of diagnosis and treatment \cite{mcleod_cancer_2013}. 
-One of the most developed, wide-spread implementions of PGS data usage in clinical practice currently is in rare genetic disease identification and treatment \cite{krier_genomic_2016}. 
+Similarly, for cancer patients, the use of PGS data has been shown to augment existing strategies of diagnosis and treatment \cite{mcleod_cancer_2013}. 
+One of the most developed, wide-spread implementations of PGS data usage in clinical practice currently is in rare genetic disease identification and treatment \cite{krier_genomic_2016}. 
 Despite these advanced use cases, barriers to adoption remain, especially due to the cost and technological infrastructure demands posed by large scale PGS data generation, storage, and analysis.
+
+\rv{This medical background should probably be shortened for the target audience; does not need as many domain references.}
 
 \subsubsection{PGS data storage and sharing} 
 PGS data are expensive to both generate and store. 
 The average human genome is slightly over 3 billion base pairs in length (3 Gbp). 
 During a whole genome sequencing workflow, various sequence formats, that offer different sets of information, such as FASTQ \cite{cock_sanger_2010}, SAM/BAM/CRAM \cite{li_sequence_2009}\cite{bonfield_cram_2022}, VCF \cite{danecek_variant_2011}, and others are produced and stored indefinitely. 
-VCF files are typically between 100-1000s MB (0.1-1 GB) within computer memory and represent around 3 million nucleotide positions of an individual\textquotesingle s PGS. 
+VCF files are typically between 100-1000s MB (0.1-1 GB) within computer memory and represent around 3 million nucleotide positions of an individual's PGS. 
 VCF file format serve as the state-of-the-art for most clinical genomic applications.
+
+\rv{The above paragraph is a good example of what the target audience needs to know.}
 
 For these genomic data, along with the financial considerations, there are also significant privacy considerations.
 Unfortunately, this relationship between privacy and cost is largely antagonistic within the current technological framework.
 Increases in privacy protections for PGS data often lead to increases in data siloing and increased general costs for both patient and provider.
 To make PGS data usage in healthcare more scalable, decreases in costs and preservation, or improvement of, current privacy standards for PGS data storage are required.
+
 One strategy that could reduce costs is the increase of data sharing and discoverability between hospital systems.
-The increase in data sharing could be further augmented by greater coneectivity of a single patient\textquotesingle s data, such as previous test results, PGS data, medical history, etc.
+\rv{Okay, this is the essence---that should definitely make it into the abstract!}
+The increase in data sharing could be further augmented by greater connectivity of a single patient's data, such as previous test results, PGS data, medical history, etc.
 Increasing patient data connectedness and accessibility for authorized users is not a trivial problem while also maintaining privacy.
 It is at this crossroads that the current state-of-the-art in clinical data storage technology is largely incapable of achieving both goals.
+
+\rv{Excellent paragraph}}
 
 \subsubsection{Solid - A semantic alternative} 
 A conceptual approach that offers solutions to the current dead-end described above is a citizen-centric system of clinical PGS data storage. 
 The citizen-centric model places the patient at the center, and is not an entirely novel concept [c].
-To accomplish a citizen-centric storage appraoch, the Solid protocol \cite{capadisli_solid_nodate}, offers the foundation for building a framework to granularize data privacy, allow authorized data access over the web, represent stored data as Linked Data, among others. 
+To accomplish a citizen-centric storage approach, the Solid protocol \cite{capadisli_solid_nodate}, offers the foundation for building a framework to granularize data privacy, allow authorized data access over the web, represent stored data as Linked Data, among others. 
 While there is still much work to be done before this fledgling technologies can be applied to clinical practice, Solid provides the foundational components to build a citizen-centric storage framework, thereby, removing some of the antagonism between cost reduction and privacy.
+
+\rv{The title of the paragraph mismatches with its contents; if the title is correct, what is the benefit of semantics?}
 
 \textbf{Resource Description Format and Linked Data.}
 To fully harness the advantages offered by Solid, experimentation with semantic data representation and data linkages hold great promise to both reduce costs and improve medical efficacy.
 Resource Description Framework (RDF) is a way of semantically representing data that also allows for data linking across documents and datastores.
 Some large public biological databases, such as UniProt \cite{theuniprotconsortium_uniprot_2017}, have been fully converted to RDF and initiatives exist for further expansion of biological data storage as RDF \cite{sib_swiss_institute_of_bioinformatics_rdf_group_members_sib_2024}.
 RDF holds promise within healthcare for connecting clinically-relevant data and has been proposed for use in Electronic Patient Records in the past \cite{lindemann_resource_2008}.
-More modernly, initiatives for improving the interoperability of health data through integrating semantic layers of information into data stores, primarly through the representation of data as RDF, have been undertaken in Europe \cite{van_der_horst_bridging_2023}.
-With more and more data being represented in RDF, the advantages of such a data formatting strategy are now becoming increasinly possible.
+More modernly, initiatives for improving the interoperability of health data through integrating semantic layers of information into data stores, primarily through the representation of data as RDF, have been undertaken in Europe \cite{van_der_horst_bridging_2023}.
+With more and more data being represented in RDF, the advantages of such a data formatting strategy are now becoming increasingly possible.
+
+\rv{Well yes, but for our target audience, make this more tangible. They know RDF already; the biological data argument is good, but the rest of the paragraph needs to be more tangible. It's currently more at the level for that medical professionals need to know.}
 
 \textbf{Project Motivation.}
 Despite there being no real solutions to the current antagonism between privacy and cost reduction for PGS data usage in healthcare, there is also a conspicuous gap in the current scientific discourse around the development and implementation of a proposed solution. 
