@@ -83,10 +83,14 @@ Describe existing work in the area, work focusing on the same/similar problems o
 \end{comment}
 
 \subsection{Current State of the Art -- Clinical data storage}
-Presently, most clinically relevant health data is stored using an \textbf{institution-centric approach}, including PGS data. 
-This strategy is characterized by the hospital or hospital system isolating all of its stored data into one or more centralized databases that are governed and maintained solely by the owner institution. 
-Here, centralized storage is defined as the structural organization of a data store, establishing that a single node, the system that hosts the physical data storage, has control over managing database content, access, and permissions. 
-With this system, healthcare institutions prioritize patient data privacy over all other digital data storage considerations. 
+Currently, most clinically relevant health data, including PGS data, is stored using an \textbf{institution-centric approach} characterized by the hospital or hospital system isolating all of its stored data into one or more centralized databases that are governed and maintained solely by the owner institution. 
+Centralized storage being that a single node, the system that hosts the physical data storage, has control over managing database content, access, and permissions.
+In recent years there has also been a large transition to cloud-based data storage. 
+Within these systems, relational database structures are predominantly used to organize data stores with alternative non-relational methods like NoSQL or RDF being proposed in recent years[c].
+
+Regardless of the 
+
+prioritize patient data privacy over all other digital data storage considerations. 
 By prioritizing patient data privacy, access is commonly only allowed for authorized users within the institution\textquotesingle s internal network. 
 Crucially, this institution-centric data storage architecture, by design, allows for little to no accessibility for users or data usage requests that originate outside of the institution\textquotesingle s network, largely due to the organizational design of such centralized data storage systems. 
 With the enlarged threat of hacking, phishing, and login credential compromisation that seems to only be increasing \cite{noauthor_ransomware_nodate}, hospitals and institutions that maintain patient PGS data are forced to enact tighter regulation over data access within their institution, severely limit outside institution access, and increase the in-house cyber security staff or pay for external companies to handle such security audits.  
@@ -131,18 +135,17 @@ My hypothesis is that such a framework can be developed and would offer unique a
 
 The following six objectives will be undertaken to test my hypotheses through experimental production and testing of different modules of the proposed framework.
 \begin{enumerate}
-    \item Solid Pod PGS Data Storage
-    \item Genomic data as Linked Data
-    \item Data policies and sharing infrastructure
-    \item Data querying
-    \item Framework deployment
+  \item Solid Pod PGS Data Storage
+  \item Genomic data as Linked Data
+  \item Data policies and sharing infrastructure
+  \item Data querying
+  \item Framework deployment
 \end{enumerate}
 
-Together, these objectives will serve as the components of an operational framework that uses the proposed methods for storing, sharing, linking, and querying PGS data for clinical use. The framework, once produced, will be compared to existing strategies for storing and sharing PGS data to assess the efficacy of transitioning toward product production and marketing.
-
-<----------- Fix this ---------->
-The proposed scientific approach will contribute novel data and conclusions to numerous fields of semantic web research. 
-These findings will include an approach to how decentralized storage specifications can be applied to sensitive medical data storage, how genomic and medical data can be represented and queried as Linked Data, how existing Linked Data querying algorithms perform over genomic and health data, how granularized data policies impact querying and linking data in a medical context, and how the combination of these semantic technologies could provide an improvement over existing state-of-the-art clinical PGS data storage and usage strategies, to just name a few.
+Together, these objectives will serve as the components of an operational framework that uses the proposed methods for storing, sharing, linking, and querying PGS data for clinical use. 
+The framework, once produced, will be compared to existing strategies for storing and sharing PGS data to assess the efficacy of transitioning toward product production and marketing.
+The proposed scientific approach also aims to provide novel applicaitons for numerous fields of semantic web research. 
+Explicitely, an approach to how decentralized storage specifications can be applied to sensitive medical data storage, how genomic and medical data can be represented and queried as Linked Data, how existing Linked Data querying algorithms perform over genomic and health data, how granularized data policies impact querying and linking data in a medical context, and how the combination of these semantic technologies could provide an improvement over existing state-of-the-art clinical PGS data storage and usage strategies, are specific questions my Ph.D. aims to answer.
 
 
 \section{Research Methodology and Approach}
@@ -305,17 +308,10 @@ Further, if such infrastructure begins being deployed, it will likley lead to ef
 A hypothetical company that, in coordination with policy makers and regulatory bodies, creates a scalable storage and data sharing infrastructure for genomic data, which could also grow to include all patient health data in time, stands to change the way our healthcare system functions. 
 
 My project's framework is poised to provide the outline of necessary implementation considerations from a technological perspective while also highlighting strengths and weaknesses that will help assess scalibility of such an infrastructure. 
-My project is also being undertaken parallelly with other initiatives to assess how decentralized data storage could be advantageous within Flanders. [c]
-
 In the short-term, the project is being developed to be integrated into ongoing research and product development at VITO Digital Precision Health. 
 Products aimed at improving the way drug prescription is practiced by using a genetic screening tool that leverages documented genetic predispositions to drug ineffectiveness are currently being developed to be connected to my framework of Solid pod stored PGS data. 
-More generally, my project is designed to show the potential in representing genomic and clinical data as Linked Data while aiming to catalyze  development of medically-relevant web applications, similar to those in the consumer market, that are designed to work with the presented more private and transparent citizen-centric data storage infrastructure.
-
-Lastly, public perception is a crucial element to the economic growth of a product or sector. 
-The existing system of genomic data storage for use in healthcare is prone to data leaks and heavily restricted patient transparency due to the central architecture of institution-centric data storage. 
-With my proposed framework, patients would be more intimately connected to their data, potentially even having a say over to whom and what their data is visible. 
-Improved transparency, when paired with decreased risk of large-scale data leaks, is likely to be well-received by the general public. 
-Resulting public support could help drive framework adoption at a national or even European scale. 
+More generally, my project is designed to show the potential in representing genomic and clinical data as Linked Data while aiming to catalyze development of medically-relevant web applications, similar to those in the consumer market, that are designed to work with the presented more private and transparent citizen-centric data storage infrastructure.
+With my proposed framework, improved transparency, when paired with decreased risk of large-scale data leaks, is likely to be well-received by the general public and that support could help drive framework adoption at a national or even European scale. 
 
 
 \subsubsection{\ackname} 
