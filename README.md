@@ -16,13 +16,10 @@ C. In intro -- "data siloing and increased costs for both patient and provider".
 D. Figure 1 is a bit difficult to follow since there is no clear "flow". Maybe the diagram could be labelled (A), (B), (C), etc., or similar, and the caption could then describe what happens at (A), (B), (C), etc.
 
 E. Grammar and typos -- 
-* "current privacy standards [for] stored data are required"
-* "of a citizen-centric[] data storage"
 * "for this between institution data sharing" -> "for sharing data between institutions."
 * "which are much larger than [the datasets used?] in past Solid experimentation"
 * "with generalized algorithms and different ..." Incomplete sentence.
 * "including test data[]set"
-* "I have also successfully upload[ed]"
 
 
 Reviewer 3 Feedback:
